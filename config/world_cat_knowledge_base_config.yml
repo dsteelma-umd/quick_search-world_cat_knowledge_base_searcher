@@ -10,7 +10,7 @@
 # <URL_LINK>: The direct link for each search result page
 
 defaults: &defaults
-  base_url: "http://www.worldcat.org/webservices/catalog/search/worldcat/opensearch?count=3&wskey="
+  base_url: "http://worldcat.org/webservices/kb/rest/entries/search?"
   wskey: "<YOUR_WSKEY>"
   loaded_link: "<LOADED_LINK>"
   url_link: "<URL_LINK>"
