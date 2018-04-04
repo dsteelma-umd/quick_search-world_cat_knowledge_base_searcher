@@ -15,7 +15,7 @@ module QuickSearch
         @response['entries'].each do |value|
           result = OpenStruct.new
           result.title = value['title']
-          result.link = value['id']
+          result.link = value['links'][2]['href']
           result.author = value['kb:publisher']
           result.date = published(value)
           @results_list << result
@@ -33,6 +33,7 @@ module QuickSearch
       {
         'q' => http_request_queries['not_escaped'],
         'itemsPerPage' => '3',
+        'institution_id' => QuickSearch::Engine::WORLD_CAT_KNOWLEDGE_BASE_CONFIG['institution_id'],
         'wskey' => QuickSearch::Engine::WORLD_CAT_KNOWLEDGE_BASE_CONFIG['wskey']
       }
     end

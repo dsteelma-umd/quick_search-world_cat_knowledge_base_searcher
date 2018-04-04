@@ -3,17 +3,17 @@
 # Replace the following placeholders with the correct values for
 # your installation.
 #
-# <YOUR_WSKEY>: The wskey for your site
+# <YOUR_INSTITUTION_ID>: The WorldCat Knowledge Base institution id
 #
-# <LOADED_LINK>: The direct link to your WorldCat site
+# <YOUR_WSKEY>: The wskey that corresponds to the institution id
 #
-# <URL_LINK>: The direct link for each search result page
+# <LOADED_LINK>: The direct link to your WorldCat Knowledge Base site
 
 defaults: &defaults
   base_url: "http://worldcat.org/webservices/kb/rest/entries/search?"
+  institution_id: "<YOUR_INSTITUTION_ID>"
   wskey: "<YOUR_WSKEY>"
   loaded_link: "<LOADED_LINK>"
-  url_link: "<URL_LINK>"
 
 development:
   <<: *defaults
