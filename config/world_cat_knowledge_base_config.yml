@@ -1,0 +1,28 @@
+# Configuration
+#
+# Replace the following placeholders with the correct values for
+# your installation.
+#
+# <YOUR_INSTITUTION_ID>: The WorldCat Knowledge Base institution id
+#
+# <YOUR_WSKEY>: The wskey that corresponds to the institution id
+#
+# <LOADED_LINK>: The direct link to your WorldCat Knowledge Base site
+
+defaults: &defaults
+  base_url: "http://worldcat.org/webservices/kb/rest/entries/search?"
+  institution_id: "<YOUR_INSTITUTION_ID>"
+  wskey: "<YOUR_WSKEY>"
+  loaded_link: "<LOADED_LINK>"
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults
