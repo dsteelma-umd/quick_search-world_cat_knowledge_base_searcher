@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module QuickSearch
   # QuickSearch seacher for WorldCat Knowledge Base
   class WorldCatKnowledgeBaseSearcher < QuickSearch::Searcher
