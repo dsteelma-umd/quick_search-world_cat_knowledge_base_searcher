@@ -16,7 +16,9 @@ module QuickSearch
 
         @response['entries'].each do |value|
           result = OpenStruct.new
-          result.title = value['title']
+          # Coercing title to string, because sometimes it isn't.
+          # See LIBSEARCH-65
+          result.title = value['title'].to_s
           result.link = value['links'][2]['href']
           result.author = value['kb:publisher']
           result.date = published(value)
