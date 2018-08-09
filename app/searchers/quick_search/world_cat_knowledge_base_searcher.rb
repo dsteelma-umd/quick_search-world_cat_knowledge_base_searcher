@@ -35,7 +35,7 @@ module QuickSearch
 
     def parameters
       {
-        'q' => http_request_queries['not_escaped'],
+        'q' => http_request_queries['uri_escaped'],
         'itemsPerPage' => '3',
         'institution_id' => QuickSearch::Engine::WORLD_CAT_KNOWLEDGE_BASE_CONFIG['institution_id'],
         'wskey' => QuickSearch::Engine::WORLD_CAT_KNOWLEDGE_BASE_CONFIG['wskey']
